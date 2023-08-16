@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+:root {
+  --light-color: whitesmoke;
+  --dark-color: rgb(7, 6, 7);
+  --pink-color: rgb(235, 103, 182);
+  --green-color: rgb(111, 162, 87);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container{
+  /*border: 3px solid violet;*/
+  width: 80%; /* O el ancho deseado */
+  margin: 0 auto; /* Margen automático en los lados, centrando horizontalmente */
+  height: 100vh;
+}
+
+h1, h2, p{
+  text-align: center;
+  color:var(--dark-color);
+}
+h3{
+  margin-bottom: .5rem;
+}
+h4{
+  margin: 3rem 0 .5rem 0;
+}
+
+p{
+  padding-top: 1rem;
+}
+
+a{
+  text-decoration: none;
+  color: var(--pink-color);
+  font-size: 2rem;
+  font-weight: 900;
+}
+a:hover{
+  text-decoration: none;
+  color: var(--green-color);
+}
+
+/*ELEMENTOS FORMULARIO*/
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:.5rem;
+}
+label{
+  margin-top: .8rem;
+}
+input{
+  line-height: 2rem;
+  padding-left: .5rem;
+  border-radius: 5px;
+  border: 1px solid var(--dark-color);
+}
+input:focus{
+  outline: 3px solid var(--pink-color);
+}
+
+button{
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--pink-color);
+  color: var(--light-color);
+  font-size: 1.1rem;
+}
+button:hover{
+  background-color: var(--green-color);
+  color: var(--light-color);
+  cursor:pointer;
+}
+
+
+
+/*DATA LISTS AND TABLES*/
+li{
+  list-style: none;
+}
+.cant-li {
+  margin: 1rem;
+  line-height: 2rem;
+  text-align: right;
+}
+
+.txt-cant{
+    font-weight: bold;
+    color: var(--green-color);
+    font-size: 1.6em;
+}
+
+.txt-sal {
+  text-align: center;
+  margin: 1.4rem 0 1rem 0;
+  font-size: 1.2em;
+  color: var(--dark-color);
+}
+
+.message{
+  color: rgb(198, 59, 59);
+  margin: auto 0;
+  padding-top:2rem;
+  line-height: 4rem;
+  font-weight: bold;
+}
+
+/*TABLE SHOW*/
+table{
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+thead{
+  background-color: var(--green-color);
+  font-size: .9rem;
+}
+tbody{
+  line-height: 1rem;
+}
+td, th{
+  padding: .5rem;
+}
+
+
+/* MENU SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(230, 222, 227, 0.31);
+    backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar:hover {
+    width: 270px;
+}
+
+.sidebar .logo {
+    color: var(--pink-color);
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.logo h2 {
+  color: var(--pink-color);
+    font-size: 1.15rem;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+}
+
+.links li span {
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.links li a {
+    margin: 2rem;
+    font-weight: bold;
+    display: none;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
