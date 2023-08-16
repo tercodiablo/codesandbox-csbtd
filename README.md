@@ -21,7 +21,9 @@ return (
   );
 ```
 
-### Construido con
+### Detalles de proyecto:
+
+Aplicacion que permite consultar comprar y vender acciones, depositar fondos e imprimir estados de cuenta, se accede mediante un login. Desarrollado con:
 
 - REACT
 - CSS
@@ -30,3 +32,4 @@ return (
 ### Autor
 
 - Twitter - [Nai Campos](https://twitter.com/tercodiablo) | padawan dev
+Proyecto practico presentado en LatinasCodeCamp
